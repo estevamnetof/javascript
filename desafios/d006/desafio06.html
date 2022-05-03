@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio06</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Temperaturas</h1>
+    <button onclick="conversor()">Converter</button>
+    <div id="result">
+        <p>Clique no botão acima para iniciar.</p>
+    </div>
+
+    <script>
+        var res = document.getElementById('result')
+        function conversor() {
+           res.innerHTML = ''
+           var celsius = Number(prompt('Digite uma temperatura em °C (Celsius)').replace(',', '.'));
+           
+           var fahrenheit = ((celsius * 9) / 5 ) + 32;
+           var kelvin = celsius + 273.15; 
+
+           var celsius = celsius.toFixed(2)
+           var fahrenheit = fahrenheit.toFixed(2)
+           var kelvin = kelvin.toFixed(2)
+
+           res.innerHTML += ` <br> A temperatura de ${celsius}°C, corresponde a...`;
+           res.innerHTML += `<p>${fahrenheit}°F (Fahrenheit)</p> <br>`;
+           res.innerHTML += `<p>${kelvin}°K (Kelvin)</p>`;
+
+
+
+        }
+    </script>
+</body>
+</html>

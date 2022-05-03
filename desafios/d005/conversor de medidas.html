@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medidas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+        }
+
+        button {
+            padding: 30px;
+            font-size: 0.9em;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+    <button onclick="botao()">Converter</button>
+        <p>Clique no botão acima para iniciar.</p>
+    
+    <script>
+        function botao() { 
+            var medida = window.prompt('Digite uma distância em metros (m)')
+            document.write(`A distância de ${medida} metros, corresponde a... <br>`)
+            var km = medida / 1000
+            document.write(`${km} quilômetros (Km) <br>`)
+            var hm = medida / 100
+            document.write(`${hm} hectômetros (Hm) <br>`)
+            var dam = medida / 10
+            document.write(`${dam} decâmetros (Dam) <br>`)
+            var dm = medida * 10
+            document.write(`${dm} decímetros (dm) <br>`)
+            var cm = medida  * 100
+            document.write(`${cm} centímetros (cm) <br>`)
+            var mm = medida * 1000
+            document.write(`${mm} milímetros (mm) <br>`)
+        }
+    </script>
+</body>
+</html>

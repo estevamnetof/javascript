@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de moedas</title>
+</head>
+<body>
+    <h1>Conversor monetário<span>&#x1F4B2;</span></h1>
+    <button onclick="conversor()">Converter</button>
+    <div id="result">
+        <p>Clique no botão acima para iniciar</p>
+    </div>
+
+    <script>
+       var dollar_value = Number(prompt('Antes de mais nada. Quanto está a coleção do dólar agora?').replace(',','.'))
+
+       function conversor() {
+           var res = document.getElementById('result')
+           var reais = Number(prompt(`Quantos R$ você tem na carteira?`).replace(',','.'))
+           var dollar = (reais / dollar_value).toLocaleString('pt-br', {mínimumFractionDigits: 2, maximumFractionDigits: 2})
+
+           dollar_value = dollar_value.toLocaleString('pt-br', {mínimumFractionDigits: 2, maximumFractionDigits: 2})
+
+           res.innerHTML = `<h2> A cotação do dolar é de R$${dollar_value} e... </h2> <br>`
+           res.innerHTML += `<p> Considerando que você possui R$${reais} na sua carteira e que a cotação está nesse preço, você consegue resgatar US$${dollar}...</p>`
+       }
+    </script>
+</body>
+</html>
