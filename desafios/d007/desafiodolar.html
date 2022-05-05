@@ -14,18 +14,23 @@
     </div>
 
     <script>
-       var dollar_value = Number(prompt('Antes de mais nada. Quanto está a coleção do dólar agora?').replace(',','.'))
+        var dollar_value = Number(prompt('Antes de mais nada. Quanto está a cotação do dólar agora?').replace(',','.'))
 
-       function conversor() {
-           var res = document.getElementById('result')
-           var reais = Number(prompt(`Quantos R$ você tem na carteira?`).replace(',','.'))
-           var dollar = (reais / dollar_value).toLocaleString('pt-br', {mínimumFractionDigits: 2, maximumFractionDigits: 2})
+        function conversor () {
+            var res = document.getElementById('result')
+            
+            var reais = Number(prompt(`Quantos R$ você tem na carteira?`).replace(',','.'))
 
-           dollar_value = dollar_value.toLocaleString('pt-br', {mínimumFractionDigits: 2, maximumFractionDigits: 2})
+            var dollar = (reais / dollar_value).toLocaleString('pt-br', {mínimumFractionDigits: 2, maximumFractionDigits: 2})
 
-           res.innerHTML = `<h2> A cotação do dolar é de R$${dollar_value} e... </h2> <br>`
-           res.innerHTML += `<p> Considerando que você possui R$${reais} na sua carteira e que a cotação está nesse preço, você consegue resgatar US$${dollar}...</p>`
-       }
+            reais = reais.toLocaleString('pt-br', {mínimumFractionDigits: 2, maximumFractionDigits: 2})
+
+            dollar_value = dollar_value.toLocaleString('pt-br', {mínimumFractionDigits: 2, maximumFractionDigits: 2})
+
+            res.innerHTML = `<h2> A cotação do dolar é de R$${dollar_value} e...</h2> <br>`
+            res.innerHTML += `<p> Considerando que você possui R$${reais} na sua carteira e que a cotação está nesse preço, você consegue resgatar U$${dollar}...</p>`
+
+        }
     </script>
 </body>
 </html>
