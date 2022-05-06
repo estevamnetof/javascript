@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média do aluno</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15pt;
+            font-weight: normal;
+        }
+
+        button {
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Média do aluno</h1>
+    <button onclick="resultado()">Calcular Média</button>
+    <p id="res">O resultado vai aparecer aqui...</p>
+
+    <script>
+        function resultado() {
+            var nome = window.prompt('Qual é o nome do aluno?')
+            var nota1 = Number(window.prompt(`Qual foi a primeira nota de ${nome}?`))
+            var nota2 = Number(window.prompt(`Além de ${nota1}, qual foi a outra nota de ${nome}?`))
+            var final = (nota1 + nota2)/2
+            var msg // cria uma variável e deixa ela vazia
+                
+            if (final >= 6) {
+                // Passou
+                msg = 'Meus parabéns!'
+            } else {
+                // reprovou
+                msg = 'Estude um pouco mais!'
+            }
+
+            var res = document.querySelector('p#res')
+            res.innerHTML = `<p> Calculando a média de <strong>${nome}</strong>.`
+            res.innerHTML += `<p> As notas obtidas foram <strong>${nota1} e ${nota2}</strong></p>`
+            res.innerHTML += `<p> A média final será <strong>${final}</strong></p>`
+            res.innerHTML += `<p> A mensagem que temos é: <strong style='color:red'>${msg}</strong></p>`
+            }
+    </script>
+</body>
+</html>

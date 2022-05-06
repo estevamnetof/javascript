@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interagindo como Sistema</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,900&display=swap');
+
+        body {
+            background-image: linear-gradient(to right, rgb(39, 105, 204), rgba(245, 126, 29, 0.74));
+            position: relative;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15pt;
+            font-weight: normal;
+        }
+
+        main {
+            background-color: rgba(0, 0, 0, 0.39);
+            position: absolute;
+            width: 500px;
+            height: 300px;
+            left: 50%;
+            top: 50%;
+            padding: 10px;
+            padding-bottom: 25px;
+            border-radius: 0px 20px;
+            transform: translate(-50%, 50%);
+            text-align: center;
+            color: white;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.356);
+        }
+
+        main h1 {
+            margin-top: 5px;
+        }
+
+        button {
+            padding: 30px;
+            font-size: 13pt;
+            width: 200px;
+            border-radius: 8px;
+            transition: .4s ease;
+            border: none;
+        }
+
+        button:hover {
+            background-color: darkcyan;
+            color: white;
+            cursor: pointer;
+            letter-spacing: 0.3px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Interagindo com o Sistema</h1>
+        <button onclick="resultado()">Clique em mim</button>
+        <div id="res">
+            <p>Aqui vai aparecer algo...</p>
+        </div>
+    </main>
+
+    <script>
+        function resultado() {
+            var res = document.getElementById('res')
+            var data = new Date()
+            res.innerHTML = `<p> O que eu recebi do sistema foi <strong>${data}</strong>`
+        }
+    </script>
+</body>
+</html>

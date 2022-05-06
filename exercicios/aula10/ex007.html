@@ -5,13 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando Números</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,900&display=swap');
+
+
         body {
-            font: normal 18pt arial;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18pt;
+            font-weight: normal;
+            height: 97vh;
+            background-color: rgb(85, 76, 212);
+        }
+
+        main {
+            background-color: rgb(94, 166, 190);
+            padding: 20px;
+            color: white;
+            width: 500px;
+            margin: auto;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.329);
         }
 
         input {
             font: normal 18pt arial;
             width: 100px;
+            border: none;
+            border-radius: 5px;
         }
 
         div#res {
@@ -20,11 +40,13 @@
     </style>
 </head>
 <body>
-    <h1>Somando Valores</h1>
-    <input type="number" name="txtn1" id="txtn1"> +
-    <input type="number" name="txtn2" id="txtn2">
-    <input type="button" value="Somar" onclick="somar()">
-    <div id="res">Resultado</div>
+    <main>
+        <h1>Somando Valores</h1>
+        <input type="number" name="txtn1" id="txtn1"> +
+        <input type="number" name="txtn2" id="txtn2">
+        <input type="button" value="Somar" onclick="somar()">
+        <div id="res">Resultado</div>
+    </main>
 
     <script>
         function somar() {
