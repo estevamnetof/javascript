@@ -43,8 +43,7 @@ function verificar() {
             }
         }
         res.style.textAlign = 'Center'
-        res.innerHTML = `Detectamos ${gênero} com ${idade} anos.
-        `
+        res.innerHTML = `Detectamos ${gênero} com ${idade} anos.`
         res.appendChild(img)
     }
 }
