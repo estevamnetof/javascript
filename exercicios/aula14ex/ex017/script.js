@@ -1,7 +1,7 @@
 function tabuada() {
     let num = document.getElementById('txtn')
     let tab = document.getElementById('seltab')
-    if (num.value.length == 0) {
+    if (num.value.length == 0) { // length- significa quantas letras tem dentro 
         window.alert('Por favor, digite um número!')
     } else {
        let n = Number(num.value)
@@ -11,7 +11,7 @@ function tabuada() {
            let item = document.createElement('option')
            item.text = `${n} x ${c} = ${n*c}`
            item.value = `tab${c}`
-           tab.appendChild(item)
+           tab.appendChild(item) //  adicionar elemento
            c++
        }
     }
