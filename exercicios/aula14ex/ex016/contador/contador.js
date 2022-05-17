@@ -18,7 +18,7 @@ function contar(){
 
         // Pegando os valores de cada campo
 
-        var i = parseInt(i_txt.value); 
+        var i = parseInt(i_txt.value); // ou fazer -->> var i = Number(i_txt.value) <<--
         var f= parseInt(f_txt.value); 
         var p = parseInt(p_txt.value); 
     
