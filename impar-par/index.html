@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impar e par</title>
+    <style>
+        button {
+            width: 150px;
+            height: 50px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verifique se o número é impar ou par</h1>
+    <button onclick="valor()">Digite um número</button>
+
+    <script>
+        function valor() {
+            var n = prompt('Digite um número:')
+            var total = n / 2
+            var resultado = total % 2 == 0? 'Par' : 'Impar'
+            alert(`${n} é ${resultado}`)
+        }
+    </script>
+</body>
+</html>
