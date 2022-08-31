@@ -16,7 +16,7 @@
     <h1>Iniciando estudos com DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
-    <div id="msg">Clique em mim</div>
+    <div id="msg" onmouseover="mouseCima()" onmouseout="mouseFora()" onclick="clique()">Clique em mim</div>
 
     <script>
         var corpo = window.document.body
@@ -28,7 +28,19 @@
         */
        var d = window.document.querySelector('div#msg')
        d.style.background = 'blue'
+       corpo.style.background = 'black'
 
+       function mouseCima() {
+        d.style.background = 'yellow'       
+       }
+
+       function mouseFora() {
+        d.style.background = 'blue'
+       }
+
+       function clique() {
+        d.innerText = 'mudou o TEXTOOO'
+       }
     </script>
 </body>
 </html>

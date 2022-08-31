@@ -27,6 +27,10 @@
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.329);
         }
 
+        main > h1 {
+            font-weight: 400;
+        }
+
         input {
             font: normal 18pt arial;
             width: 100px;
@@ -44,7 +48,7 @@
         <h1>Somando Valores</h1>
         <input type="number" name="txtn1" id="txtn1"> +
         <input type="number" name="txtn2" id="txtn2">
-        <input type="button" value="Somar" onclick="somar()">
+        <input type="button" value="Somar" id="botao" onclick="somar()">
         <div id="res">Resultado</div>
     </main>
 

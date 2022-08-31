@@ -22,13 +22,16 @@
 </head>
 <body>
     <!--metodo pelo HTML-->
-    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+    <div id="area">
         Interaja...
     </div>
 
     <script>
         var a = document.getElementById('area') /* esse var aqui fora faz servir para todas outras, dentro da function não.*/
         /* quando o method (ex. getElementById) for plural (ex. getElementsByName, vai ter que usar um [] por ultimo*/
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
         function clicar() {
             a.innerText = 'Clicou!'
             a.style.background ='red'
