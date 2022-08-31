@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Creusa</h1>
+    <button onclick="emprestimo()">Pedir empréstimo</button>
+    <div id="res"></div>
+
+    <script>
+        function emprestimo() {
+            let res = document.getElementById('res')
+
+            let emprestimo = parseInt(prompt('Qual o valor do empréstimo?'))
+            let juros = (emprestimo * 20) / 100
+            let valor = emprestimo + juros
+            
+            alert( `O valor com juros ficou ${valor}`)
+            let parcela = parseInt(prompt('Quantas parcelas?'))
+            let total = valor / parcela 
+            res.innerHTML = `Você terá que pagar ${parcela} parcelas de ${total} reais`
+        }
+        </script>
+</body>
+</html>
