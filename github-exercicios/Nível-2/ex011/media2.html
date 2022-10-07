@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média em JS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding: 10px;
+            font-size: 1.3em;
+        }
+
+        button {
+            padding: 30px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Média do Aluno</h1>
+    <button onclick="calcular()">Calcule aqui</button>
+    <div class="res">resultado aqui</div>
+
+    <script>
+        function calcular() {
+            const res = document.querySelector('.res');
+
+            const nome = prompt('Digite seu nome: ');
+
+            const n1 = parseInt(prompt(`Olá ${nome}, digite sua primeira nota: `));
+            const n2 = parseInt(prompt(`${nome}, agora digite sua segunda nota: `));
+            const media = (n1 + n2) / 2;
+
+            let msg = ''
+            if(media >= 6) {
+                // Passou
+                msg = 'Meus parabéns!'
+            } else {
+                msg = 'Estude um pouco mais!'
+            }
+            
+            res.innerHTML = `A primeira nota de ${nome} foi <strong>${n1}</strong> <br>`
+            res.innerHTML += `A segunda nota foi <strong>${n2}</strong> <br>`
+            res.innerHTML += `A média final é <strong>${media}</strong> <br>`
+            res.innerHTML += `Sendo assim temos uma mensagem para você: <strong style='color:red'>${msg}</strong>`
+        }   
+    </script>
+</body>
+</html>
