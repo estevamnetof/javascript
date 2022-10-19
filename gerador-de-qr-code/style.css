@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 30px;
+    background-color: teal;
+    color: #eee;
+}
+
+h1 {
+    padding: 50px;
+    font-weight: bold;
+}
+
+textarea {
+    width: 400px;
+    height: 150px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+img {
+    margin-top: 20px;
+}
