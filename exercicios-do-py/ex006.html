@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobro, triplo e raiz quadrada</title>
+</head>
+<body>
+    <h1>Dobro, triplo e raiz quadrada</h1>
+    <div class="res"></div>
+
+    <script>
+        let res = document.querySelector('.res');
+        let n = prompt('Digite um número: ')
+
+        let dobro = n * 2
+        let triplo = n * 3
+        let raiz = Math.sqrt(n)
+
+        res.innerText = `O dobro de ${n} é: ${dobro} \n`
+        res.innerText += `O triplo é: ${triplo} \n`
+        res.innerText += `A raiz quadrada é: ${raiz}`
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pintura</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: blueviolet;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pintura</h1>
+    <div class="res"></div>
+
+    <script>
+        let res = document.querySelector('.res');
+        let altura = parseInt(prompt('Digite a altura: '))
+        let largura = parseInt(prompt('Digite a largura: '))
+
+        let area = largura * altura
+        let tinta = area / 2
+
+        res.innerHTML = `Sua parede tem a dimensão de ${largura}x${altura} e sua área é de ${area}m² <br>`
+        res.innerHTML += `Para pintar essa parede, você precisará de ${tinta} litros de tinta`
+    </script>
+</body>
+</html>

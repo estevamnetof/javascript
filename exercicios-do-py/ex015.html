@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluguel de carro</title>
+</head>
+<body>
+    <h1>Aluguel de carro</h1>
+    <div class="res"></div>
+
+    <script>
+        let res = document.querySelector('.res');
+        let km = parseFloat(prompt('Digite a quantidade de Km percorridos: '));
+        let dias = parseInt(prompt('Quantos dias o carro foi alugado? '));
+        let totalAluguel = (dias * 60) + (km * 0.15);
+
+        res.innerHTML = `O aluguel saiu R$${totalAluguel}`;
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doláres</title>
+    <style>
+        body {
+            background-color: green;
+            color: white;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Doláres 💵</h1>
+    <div class="res"></div>
+
+    <script>
+        let res = document.querySelector('.res');
+        let cotacao = parseFloat(prompt('Antes de tudo, qual a cotação do dólar hoje? '))
+        let dinheiro = parseFloat(prompt('Digite quanto você tem: '))
+        let conversao = dinheiro / cotacao
+
+        res.innerHTML = `A cotação de hoje está em ${cotacao} dólares <br>`
+        res.innerHTML += `Você tem R$${dinheiro} <br>`
+        res.innerHTML += `Com o que você tem em reais, você pode ter USD${conversao}`
+    </script>
+</body>
+</html>

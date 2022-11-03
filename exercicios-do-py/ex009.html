@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dodgerblue;
+            color: white;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .res {
+            padding: 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <button onclick="mostrarTabuada()">Mostrar tabuada</button>
+    <button onclick="limparTabuada()">Limpar Tabuada</button>
+    <div class="res"></div>
+
+    <script>
+        function mostrarTabuada() {
+            let n = parseInt(prompt('Digite um número: '))
+            d = 1
+            while (d <= 10) {
+                mensagem += `${d} x ${n} = ${d * n} <br>`
+                d++
+            }
+            res.innerHTML = mensagem
+        }
+
+        function limparTabuada() {
+            mensagem = ''
+            res.innerHTML = mensagem
+        }
+
+        var mensagem = ''
+        let res = document.querySelector('.res');
+    </script>
+</body>
+</html>

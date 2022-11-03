@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperatura</title>
+</head>
+<body>
+    <h1>Temperatura</h1>
+    <div class="res"></div>
+
+    <script>
+        let res = document.querySelector('.res');
+        let celsius = parseFloat(prompt('Digite sua temperatura em Celsius: '))
+        let fahrenheit = ((celsius * 9) / 5) + 32
+
+        res.innerHTML = `Temperatura em ${celsius}°C, em Fahrenheit é ${fahrenheit}°F`
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: cornflowerblue;
+            color: white;
+        }
+
+        .res {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Média</h1>
+    <div class="res"></div>
+
+    <script>
+        let res = document.querySelector('.res');
+        let n1 = parseFloat(prompt('Primeira nota: '))
+        let n2 = parseFloat(prompt('Segunda nota: '))
+
+        res.innerText = `Sua primeira nota foi ${n1} \n`
+        res.innerText += `Sua segunda nota foi ${n2} \n`
+        res.innerText += `Sua média foi ${(n1 + n2) / 2}`
+    </script>
+</body>
+</html>
