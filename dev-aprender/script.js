@@ -312,4 +312,32 @@ transacoes2.forEach((item) => {
     }
 });
 
-console.log(taxasTotal)
+console.log(taxasTotal);
+
+const ano1 = 2022;
+const preco2 = new Number(99);
+
+const preco3 = 2.99;
+console.log(preco3.toFixed());
+
+const carro2 =  1000.455;
+console.log(carro2.toFixed(2));
+
+const preco4 = 1499.49;
+console.log(preco4.toFixed());
+
+const preco5 = 59.49;
+preco.toLocaleString('en-US', {style: 'currency', currency: 'USD'});
+preco.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'});
+
+// Número random entre 72 e 32
+Math.floor(Math.random() * (72 - 31 + 1) + 32);
+
+// Retorne um número aleatório
+// entre 1050 e 2000
+Math.floor(Math.random() * (2000 - 1050 + 1) + 1050);
+
+// Retorne o maior número da lista abaixo
+const numeros = '4, 5, 20, 8, 9';
+const arrayNumeros = numeros.split(',');
+const numeroMaximo = Math.max(...arrayNumeros);
