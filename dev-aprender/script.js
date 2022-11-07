@@ -341,3 +341,142 @@ Math.floor(Math.random() * (2000 - 1050 + 1) + 1050);
 const numeros = '4, 5, 20, 8, 9';
 const arrayNumeros = numeros.split(',');
 const numeroMaximo = Math.max(...arrayNumeros);
+
+// Crie uma função para limpar os preços
+// e retornar os números com centavos arredondados
+// depois retorne a soma total
+const listaPrecos2 = ['R$ 59,99', ' R$ 100,222', ' R$ 230  ', 'r$  200'];
+
+function limparPreco(preco) {
+    preco = +preco.toUpperCase().replace('R$', '').trim().replace(',', '.');
+    preco = +preco.toFixed(2);
+    return preco;
+  }
+  
+  let soma = 0;
+  listaPrecos.forEach((preco) => {
+    soma += limparPreco(preco);
+  })
+  
+  console.log(soma.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}));
+  
+  limparPreco(listaPrecos[1]);
+
+  const instrumentos = ['Guitarra', 'Baixo', 'Violão'];
+  const precos = [49, 99, 69, 89];
+
+  const dados = [new String('Tipo 1'), ['Carro', 'Portas', {cor: 'Azul', preco: 2000}], function andar(nome) { console.log(nome)}];
+
+
+
+let li = document.querySelectorAll('li');
+li = Array.from(li);
+
+// const carros = {
+//     0: 'Fiat',
+//     1: 'Honda',
+//     2: 'Ford',
+//     length: 4,
+// }
+
+// const carrosArray = Array.from(carros);
+// console.log(carrosArray);
+// console.log(carrosArray.sort());
+
+const idades = [32, 21, 33, 43, 1, 12, 8];
+// console.log(idades);
+// console.log(idades.sort());
+
+// carrosArray.push('Ferrari');
+// carrosArray.unshift('VW');
+
+// console.log(carrosArray.shift());
+// console.log(carrosArray.pop());
+
+// console.log(carrosArray.reverse());
+
+// carrosArray.splice(1, 0, 'Kia', 'Mustang');
+
+const lista1 = ['Item1', 'Item2', 'Item3', 'Item4'].copyWithin(2, 0, 3);
+
+const lista2 = ['Item1', 'Item2', 'Item3', 'Item4'].fill('Banana');
+
+
+const transporte1 = ['Barco', 'Avião'];
+const transporte2 = ['Carro', 'Moto'];
+const transportes3 = transporte1.concat(transporte2);
+
+const maisTransportes = [].concat(transporte1, transporte2, 'Van');
+
+const linguagens = ['html', 'css', 'js', 'php', 'python'];
+linguagens.join(' ');
+
+
+
+let htmlString = '<h2>Título Principal</h2>'
+htmlString = htmlString.split('h2');
+htmlString = htmlString.join('h1');
+
+// const carros2 = ['Ford', 'Fiat', 'Honda'];
+// carros2.forEach((item, index, array) => {
+//     console.log(item.toUpperCase);
+// });
+
+const li2 = document.querySelectorAll('li');
+
+li2.forEach( i => i.classList.add('ativa'));
+
+li2.forEach(function(item) {
+    item.classList.add('ativa');
+});
+
+const carros2 = ['Ford', 'Fiat', 'Honda'];
+
+// carros2.forEach((item, index, array) => {
+//     array[index] = 'Carro ' + item;
+// });
+
+const newCarros = carros2.map((item) => {
+    return 'Carro ' + item;
+});
+
+
+const numeros2 = [2, 4, 6, 8, 10, 12, 14];
+const numerosX3 = numeros2.map(n => n * 3);
+
+
+const aulas = [ 
+    {
+        nome: 'HTML 1',
+        min: 15
+    },
+    {
+        nome: 'HTML 2',
+        min: 10
+    },
+    {
+        nome: 'CSS 1',
+        min: 20
+    },
+    {
+        nome: 'JS 1',
+        min: 25
+    },
+]
+
+const puxarNomes = aula => aula.nome;
+const nomesAulas = aulas.map(puxarNomes);
+
+
+const aulas1 = [10, 25, 30];
+const total1 = aulas1.reduce((acumulador, atual) => {
+    return acumulador + atual;
+});
+
+const total2 = aulas1.reduce((acc, cur) => acc + cur, 100);
+
+const numeros3 = [10, 25, 60, 5, 35, 10];
+
+const maiorValor = numeros3.reduce((anterior, atual) => {
+    return anterior < atual ? atual : anterior;
+});
