@@ -480,3 +480,116 @@ const numeros3 = [10, 25, 60, 5, 35, 10];
 const maiorValor = numeros3.reduce((anterior, atual) => {
     return anterior < atual ? atual : anterior;
 });
+
+
+const comidas = ['Pizza', 'Frango', 'Carne', 'Macarrão'];
+// Remova o primeiro valor de comidas e coloque em uma variável
+// Remova o último valor de comidas e coloque em uma variável
+// Adicione 'Arroz' ao final da array
+// Adicione 'Peixe' e 'Batata' ao início da array
+const primeiroValor = comidas.shift();
+const ultimoValor = comidas.pop();
+const adcUltimoValor = comidas.push('Arroz');
+const adcPrimeiroValor = comidas.unshift('Peixe');
+
+const estudantes = ['Marcio', 'Brenda', 'Joana', 'Kleber', 'Julia'];
+// Arrume os estudantes em ordem alfabética
+// Inverta a ordem dos estudantes
+// Verifique se Joana faz parte dos estudantes
+// Verifique se Juliana faz parte dos estudantes
+const ordemAEstudantes = estudantes.sort();
+const ordemInversa = estudantes.reverse();
+console.log(ordemAEstudantes.includes('Joana'));
+console.log(ordemAEstudantes.includes('Juliana'));
+
+let html1 = `<section>
+                <div>Sobre</div>
+                <div>Produtos</div>
+                <div>Contato</div>
+            </section>`
+// Substitua section por ul e div com li,
+// utilizando split e join
+html1 = html1.split('section').join('ul');
+html1 = html1.split('div').join('li');
+
+// Remova o último carro, mas antes de remover
+// salve a array original em outra variável
+const carros = ['Ford', 'Fiat', 'VW', 'Honda'];
+const carrosCopia = carros.slice()
+
+console.log(carros.pop());
+
+console.log(carros);
+console.log(carrosCopia);
+
+// Selecione cada curso e retorne uma array
+// com objetos contendo o título, descrição,
+// aulas e horas de cada curso
+const cursos = document.querySelectorAll('.curso');
+const arrayCursos = Array.from(cursos);
+
+const objetoCursos = arrayCursos.map((curso) => {
+    const titulo = document.querySelector('h1').innerText;
+    const descricao = document.querySelector('p').innerText;
+    const aulas = document.querySelector('.aulas').innerText;
+    const horas = document.querySelector('.horas').innerText;
+    return {
+        titulo,
+        descricao,
+        aulas,
+        horas
+    }  
+});
+
+console.log(arrayCursos);
+console.log(objetoCursos);
+
+// Retorne uma lista com os
+// números maiores que 100
+const numeros1 = [3, 44, 333, 23, 122, 322, 33];
+const maioresQue100 = numeros1.filter(n => n > 100);
+
+
+// Verifique se Baixo faz parte
+// da lista de instrumentos e retorne true
+const instrumentos2 = ['Guitarras', 'Baixo', 'Bateria', 'Teclado'];
+const possuiBaixo = instrumentos2.some((item) => {
+    return item === 'Baixo'
+});
+console.log(possuiBaixo);
+
+
+// Retorne o valor total das compras
+const compras = [
+    {
+      item: 'Banana',
+      preco: 'R$ 4,99'
+    },
+    {
+      item: 'Ovo',
+      preco: 'R$ 2,99'
+    },
+    {
+      item: 'Carne',
+      preco: 'R$ 25,49'
+    },
+    {
+      item: 'Refrigerante',
+      preco: 'R$ 5,35'
+    },
+    {
+      item: 'Queijo',
+      preco: 'R$ 10,60'
+    },
+    {
+      item: 'Arroz',
+      preco: 'R$ 5,50'
+    }
+  ];
+
+const valorTotal = compras.reduce((acumulador, item) => {
+    const precoLimpo = +item.preco.replace('R$ ', '').replace(',', '.');
+    return acumulador + precoLimpo
+}, 0);
+
+console.log(valorTotal);
