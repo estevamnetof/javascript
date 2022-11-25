@@ -6,11 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Fetch</title>
+    <style>
+        body {
+            background-color: #aaa;
+            padding: 5px;
+        }
+
+        label {
+            display: block;
+        }
+
+        input {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <img src="" alt="">
+    <form id="buscaCep">
+        <label for="cep">Digite seu cep</label>
+        <input type="text" id="cep">
+        <input type="button" value="Buscar Cep" id="btnCep">
+    </form>
+    <div class="resultadoCep"></div>
     <div>
-        <h1>titulo</h1>
+        <h2>Preço BTC</h2>
+        <p class="btc"></p>
+    </div>
+    <div>
+        <p class="piada"></p>
+        <button class="proxima">Proxima</button>
     </div>
     <script src="script.js"></script>
 </body>
