@@ -161,7 +161,6 @@ function criarElemento(tag, classe, conteudo) {
 
 console.log(criarElemento('ul', 'azul', 'Esse é o conteúdo'));
 
-
 // Crie uma nova função utilizando a anterior como base
 // essa nova função deverá sempre criar h1 com a 
 // classe titulo. Porém o parâmetro conteudo continuará dinâmico
