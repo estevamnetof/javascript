@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700;900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: #024959;
+}
+
+h1 {
+    color: #fff;
+    font-weight: 200;
+    font-size: 2em;
+    text-shadow: 3px 5px 9px rgba(0, 0, 0, 0.432);
+}
+
+.to-do {
+    width: 500px;
+    height: 80px;
+    background: #F2C12E;
+    margin: 0 auto;
+    color: #dadada;
+    border-radius: 15px 0px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.to-do #task {
+    width: 70%;
+    height: 40px;
+    border: none;
+    outline: none;
+    margin: 15px 0;
+    border-radius: 4px;
+    font-size: 1.3em;
+}
+
+.to-do button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.to-do button:hover {
+    background-color: #024959;
+    color: white;
+    animation: botao .3s forwards;
+}
+
+@keyframes botao {
+    from {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, -3px, 0);
+    }
+}
+
+footer {
+    font-weight: 200;
+}
+
+footer p {
+    color: #D3D3D3;
+    font-size: 1em;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ccc8c8;
+    font-weight: 400;
+}
+
+footer a:hover {
+    color: #F2C12E;
+}
