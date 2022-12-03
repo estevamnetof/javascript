@@ -23,10 +23,12 @@ function twoDigits(digit) {
 function iniciarTempo() {
     watch();
     interval = setInterval(watch, 10);
+    document.body.style.background = '#0AC700';
 }
 
 function pausarTempo() {
     clearInterval(interval)
+    document.body.style.background = '#FA0702';
 }
 
 function resetarTempo() {
@@ -34,6 +36,7 @@ function resetarTempo() {
     sec = 0
     min = 0
     document.querySelector('.watch').innerText = '00:00:00';
+    document.body.style.background = '#ffa600'
 }
 
 function watch() {
