@@ -5,7 +5,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #aaa;
+    /* background-color: #aaa; */
+}
+
+body {
+    background: url(img/imagem.jpg);
+    background-position: center center;
+    background-size: 100vw;
+    background-repeat: no-repeat;
 }
 
 .relogio {
@@ -22,17 +29,29 @@
     height: 200px;
     text-align: center;
     line-height: 200px;
-    border-radius: 10px;
+    border-radius: 15px 0px;
     color: #fff;
     font-size: 7rem;
     border: 10px solid #FFD523;
     font-family: 'Qahiri', sans-serif;
+    box-shadow: #2c2e43 0px 4px 8px -2px, #2c2e43 0px 0px 0px 10px;
+    cursor: default;
 }
 
 footer {
     font-size: 1.3rem;
     margin-top: 10px;
     font-style: italic;
-    color: #333;
+    color: #fff;
     font-family: 'Barlow Condensed', sans-serif;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer a:hover {
+    color: #FFD523;
+    transition: .3s ease-in-out;
 }
