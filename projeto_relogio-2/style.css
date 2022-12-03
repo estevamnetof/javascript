@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Qahiri&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@0;1&display=swap');
 
+/* Typical Device Breakpoints
+------------------------------
+Pequenas telas: até 600px 
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop:: 992px até 1200px
+Grande telas:: acima de 1200px
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -54,4 +63,24 @@ footer a {
 footer a:hover {
     color: #FFD523;
     transition: .3s ease-in-out;
+}
+
+@media (max-width: 865px) {
+    body {
+        background: url(img/imagem-g.jpg);
+        background-position: center center;
+        background-size: 150vh;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 450px) {
+    .display {
+        width: 220px;
+        height: 150px;
+        font-size: 5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
