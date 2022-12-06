@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Modal</title>
+    <style>
+        body {
+            text-align: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            background: #8a2be2;
+            padding: 15px 20px;
+            border: none;
+            outline: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin: 0 auto;
+            text-align: center;
+            align-items: center;
+        }
+
+        .modal {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10rem;
+        }
+
+        .modal.invisible {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .modal-wrapper {
+            display: flex;
+            width: 20rem;
+            height: 10rem;
+            background: #0000003b;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            border: 5px solid #8a2be2;
+            box-shadow: #0000003b 0px 4px 8px -2px, #0000003b 0px 0px 0px 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            opacity: 1;
+            user-select: none;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="openModal">
+        Abrir janela
+    </button>
+
+    <div class="modal invisible">
+        <div class="modal-wrapper">Tecle ESC para fechar</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
