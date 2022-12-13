@@ -22,5 +22,4 @@ function adicionarTarefas() {
     task.value = '';
 }
 
-
 btn.addEventListener('click', adicionarTarefas);
