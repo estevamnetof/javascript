@@ -5,7 +5,7 @@ function refresh(){
     attempts = 0; 
     numberToFind = parseInt(Math.random() * 100);
 
-    // console.log('The number to find: '+numberToFind);
+    console.log('The number to find: '+numberToFind);
 }
 
 refresh();
@@ -34,5 +34,6 @@ function verifyNumber(){
 window.addEventListener('keydown', (event) => {
     if(event.key === 'Enter') {
         verifyNumber();
+        bet.value = ''
     }
 });
