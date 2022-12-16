@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+    <style>
+        body {
+            font-family: monospace;
+            margin: 0 auto;
+            background: blueviolet;
+        }
+
+        button {
+            background: tomato;
+            padding: 10px 20px;
+            border-radius: 4px;
+            display: flex;
+            margin: 10% auto;
+            cursor: pointer;
+        }
+
+        .container {
+            border-radius: 8px;
+            background: #333;
+            color: white;
+            font-size: 1.2rem;
+            height: 10rem;
+            width: 36rem;
+            padding: 10px;
+            margin: 0 auto;
+            text-align: center;
+            display: none;
+            animation: animacao .3s forwards;
+        }
+
+        .container.ativo {
+            display: block;
+        }
+
+        @keyframes animacao {
+            from {
+                transform: translate3d(0, 0, 0);
+            }
+            to {
+                transform: translate3d(0, -20px, 0);
+            }
+        }
+
+        input {
+            padding: 8px 10px;
+            border: none;
+            border-radius: 4px;
+            outline: none;
+        } 
+    </style>
+</head>
+<body>
+    <button onclick="abrirModal()">Entrar</button>
+    <div class="container">
+            <label for="email">Email</label>
+            <input type="email" id="email">
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha">
+            <button id="entrar">Entrar</button>
+    </div>
+
+    <script>
+        const container = document.querySelector('.container');
+
+        function abrirModal() {
+            container.classList.toggle('ativo');
+        }
+    </script>
+</body>
+</html>
