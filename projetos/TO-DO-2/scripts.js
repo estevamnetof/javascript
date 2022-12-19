@@ -1,6 +1,6 @@
 const btn = document.querySelector('#btn');
 
-function adicionarTarefas() {
+function adicionarTarefas(event) {
     const itemLista = document.querySelector('#todoList');
     const task = document.querySelector('#task');
 
@@ -22,7 +22,14 @@ function adicionarTarefas() {
     task.value = '';
 }
 
+function adicionarEnter(event) {
+    if (event.key === 'Enter') {
+        adicionarTarefas();
+    }
+}
+
 btn.addEventListener('click', adicionarTarefas);
+window.addEventListener('keydown', adicionarEnter);
 
 
 // // Criar um botão:
