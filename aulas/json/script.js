@@ -20,3 +20,9 @@ const configuracoes = {
 localStorage.configuracoes = JSON.stringify(configuracoes);
 const pegarConfiguracoes = JSON.parse(localStorage.configuracoes);
 console.log(pegarConfiguracoes);
+
+fetch('dados.json')
+.then(response => response.json())
+.then(dados => {
+    console.log(dados)
+});
