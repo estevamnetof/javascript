@@ -1,3 +1,4 @@
+debugger;
 let item1 = 1;
 function funcao1() {
   let item2 = 2;
