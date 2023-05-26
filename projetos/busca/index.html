@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca teste</title>
+    <style>
+        body {
+            background: black;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var produtos = [
+            {id: 1, descricao: "Smartphone", categoria: "Eletrônico"},
+            {id: 2, descricao: "Notebook", categoria: "Eletrônico"},
+            {id: 3, descricao: "Geladeira", categoria: "Eletrodoméstico"},
+            {id: 4, descricao: "Liquidificador", categoria: "Eletrodoméstico"},
+            {id: 5, descricao: "Fogão", categoria: "Eletrodoméstico"}
+        ]
+
+        function eletronicos(event) {
+            if (event.categoria == 'Eletrônico') {
+                console.log(event);
+            }
+        }
+
+        const produtosEletronicos = produtos.filter(eletronicos);
+    </script>
+</body>
+</html>
