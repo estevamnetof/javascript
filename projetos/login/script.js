@@ -19,17 +19,17 @@ function viewPassword(password) {
 }
 
 function inputCorrect(item, label, campo) {
-    label.innerHTML = campo
-    label.style.color = 'green'
-    item.style.borderBottom = '2px solid green'
+    label.innerHTML = campo;
+    label.style.color = 'green';
+    item.style.borderBottom = '2px solid green';
 }
 
 // Verificação de caracteres
 senha.addEventListener('keyup', () => {
     if (senha.value.length <= 8) {
-        labelSenha.innerHTML = 'Senha * Sua senha deve conter pelo menos 8 caracteres'
-        labelSenha.style.color = 'red'
-        senha.style.borderBottom = '2px solid red'
+        labelSenha.innerHTML = 'Senha * Sua senha deve conter pelo menos 8 caracteres';
+        labelSenha.style.color = 'red';
+        senha.style.borderBottom = '2px solid red';
     } else {
         inputCorrect(senha, labelSenha, 'Senha');
     }
@@ -38,9 +38,9 @@ senha.addEventListener('keyup', () => {
 // Senhas conferem
 senhaConfirm.addEventListener('keyup', () => {
     if (senha.value != senhaConfirm.value) {
-        labelSenhaConfirm.innerHTML = 'As senhas não conferem'
-        labelSenhaConfirm.style.color = 'red'
-        senhaConfirm.style.borderBottom = '2px solid red'
+        labelSenhaConfirm.innerHTML = 'As senhas não conferem';
+        labelSenhaConfirm.style.color = 'red';
+        senhaConfirm.style.borderBottom = '2px solid red';
     } else {
         inputCorrect(senhaConfirm, labelSenhaConfirm, 'Confirmar Senha');
     }
@@ -54,3 +54,8 @@ eyes.addEventListener('click', () => {
 eyesConfirm.addEventListener('click', () => {
     viewPassword(senhaConfirm);
 });
+
+function cadastrar() {
+    msgError.style.display = 'block';
+    msgError.innerHTML = 'testando';
+}
