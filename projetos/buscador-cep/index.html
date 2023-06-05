@@ -4,79 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Buscador de CEP</title>
-    <style>
-        body {
-            max-width: 1200px;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            font-family: 'Archivo', sans-serif;
-            background-color: #6495ed;
-        }
-
-        input#cep {
-            border: none;
-            width: 200px;
-            height: 30px;
-            border-radius: 4px;
-        }
-
-        #btn {
-            margin-left: 10px;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: .3s all;
-            text-transform: uppercase;
-        }
-
-        #btn:hover {
-            background: #c8c8c8;
-        }
-
-        .res {
-            padding: 20px 0;
-            font-size: 1.25rem;
-            line-height: 2rem;
-            text-align: left;
-        }
-    </style>
 </head>
 <body>
-    <main>
-        <h1>Buscador de CEP</h1>
-        <input type="text" name="cep" id="cep">
-        <button id="btn">Buscar</button>
-        <div class="res"></div>
-    </main>
+    <div class="alert-error ">
+        Digite um CEP válido (Verifique se está como o exemplo no campo de busca)
+    </div>
 
-    <script>
-        const cep = document.querySelector('#cep');
-        const btn = document.querySelector('#btn');
-        const res = document.querySelector('.res');
+    <div class="container">
+        <main class="card">
+        <form>
+            <h1 class="title">Buscador de CEP</h1>
+            <input id="input-cep" type="text" placeholder="00000-000">
 
-        function buscarCep(event) {
-            const infoCep = fetch(`https://viacep.com.br/ws/${cep.value}/json/`)
-            .then(response => response.json())
-            .then(cep => {
-                console.log(cep)
-                res.innerHTML +=  cep.logradouro + '<br>'
-                res.innerHTML += 'Complemento: ' + cep.complemento + '<br>'
-                res.innerHTML += 'Bairro: ' + cep.bairro + '<br>'
-                res.innerHTML += 'Cidade: ' + cep.localidade + '<br>'
-                res.innerHTML += 'DDD: ' + cep.ddd
-            })
+            <button class="searchCep" type="submit">Buscar <img src="img/seta.svg"></button>
+        </form>
+        </main>
+    </div>
 
-            // res.innerHTML += cep.value
-            // res.innerHTML += infoCep.logradouro
-        }
+    <div class="modal-wrapper ">
+        <div class="modal card">
+            <h2 class="title">
 
-        btn.addEventListener('click', buscarCep);
-    </script>
+                <img class="close" src="img/close.svg" alt="Fechar">
+
+                <span></span>
+            </h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
