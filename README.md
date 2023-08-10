@@ -2,6 +2,6 @@
 
 Algumas aulas e projetos
 
-projetos: 
+## Projetos: 
 
-Buscador de CEP: https://javascript-ashen.vercel.app/
+Buscador de CEP: https://estevamnetof.github.io/javascript/projetos/buscador-cep/
