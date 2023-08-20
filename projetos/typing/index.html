@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: cornflowerblue;
+            color: #2F2F2F;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="element"></h1>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+    var typed = new Typed('#element', {
+      strings: ['Primeiro texto de exemplo...', 'Segundo texto de exemplo...'],
+      typeSpeed: 50,
+    });
+  </script>
+</body>
+</html>
