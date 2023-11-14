@@ -21,16 +21,31 @@ h1 {
 }
 
 button {
-    padding: 10px 20px;
+    padding: 20px 40px;
     border-radius: 4px;
     border: none;
     background-color: #a9a9a9;
     color: #fff;
-    margin-top: 10px;
+    margin-top: 3%;
     cursor: pointer;
     text-transform: uppercase;
 }
 
 button:hover {
     background-color: #867f7f;
+}
+
+.copia {
+    display: none;
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 10px;
+    border-radius: 4px;
+    color: #ffff;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.copia:hover {
+    transform: scale(1.05);
 }
