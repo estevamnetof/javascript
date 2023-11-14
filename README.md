@@ -32,6 +32,7 @@ JavaScript é uma linguagem de programação que permite a você implementar ite
 | Relógio | [Link](https://estevamnetof.github.io/javascript/projetos/projeto_relogio/) |
 | Slide Stories | [Link](https://estevamnetof.github.io/javascript/projetos/slide-stories/) |
 | Validar CPF| [Link](https://estevamnetof.github.io/javascript/projetos/validar-cpf/) |
+| Cores Hexadecimais| [Link](https://estevamnetof.github.io/javascript/projetos/cores-hexadecimais/) |
 ## Stacks
 
 <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white"></img>
